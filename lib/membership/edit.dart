@@ -19,7 +19,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
   Future editprofile (String farmer_ID, String username, String password) async {
     try {
-      String url = "https://meloned.relaxlikes.com/api/editprofile.php";
+      String url = "https://meloned.relaxlikes.com/api/v0/update.php";
       var response = await http.post(Uri.parse(url), body: {
         'farmer_ID': farmer_ID,
         'username': username,
@@ -61,7 +61,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   }
 
   Future getdata() async {
-    var url = "https://meloned.relaxlikes.com/api/view.php";
+    var url = "https://meloned.relaxlikes.com/api/v0/view.php";
     var response = await http.get(Uri.parse(url));
     return json.decode(response.body);
   }

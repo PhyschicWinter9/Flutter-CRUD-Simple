@@ -38,7 +38,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   Future Register() async {
-    var url = "https://meloned.relaxlikes.com/api/register.php";
+    var url = "https://meloned.relaxlikes.com/api/v0/register.php";
 
     var response = await http.post(Uri.parse(url), body: {
       'username': usernameController.text,

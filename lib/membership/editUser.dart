@@ -57,7 +57,7 @@ class _EditUserState extends State<EditUser> {
 
   Future editUserv1() async{
     if (editMode) {
-      var url = 'https://meloned.relaxlikes.com/api/update.php';
+      var url = 'https://meloned.relaxlikes.com/api/v0/update.php';
       var response = await http.post(Uri.parse(url), body: {
         'farmer_ID': farmer_IDController.text,
         'username': usernameController.text,

@@ -15,7 +15,7 @@ class ViewProfileScreen extends StatefulWidget {
 
 class _ViewProfileScreenState extends State<ViewProfileScreen> {
   Future getProfile() async {
-    var url = "https://meloned.relaxlikes.com/api/view.php";
+    var url = "https://meloned.relaxlikes.com/api/v0/view.php";
     var response = await http.get(Uri.parse(url));
     return json.decode(response.body);
   }

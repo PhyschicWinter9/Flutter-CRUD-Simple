@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Future Login() async {
-    var url = "https://meloned.relaxlikes.com/api/login.php";
+    var url = "https://meloned.relaxlikes.com/api/v0/login.php";
     var response = await http.post(Uri.parse(url), body: {
       'username': usernameController.text,
       'password': passwordController.text,

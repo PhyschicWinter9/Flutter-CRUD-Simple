@@ -17,7 +17,7 @@ class _DeleteProfileScreenState extends State<DeleteProfileScreen> {
   
   Future deleteProfile(String farmer_ID) async {
     try {
-      String url = "https://meloned.relaxlikes.com/api/deleteprofile.php";
+      String url = "https://meloned.relaxlikes.com/api/v0/deleteprofile.php";
       var response = await http.post(Uri.parse(url), body: {
         'farmer_ID': farmer_ID,
       });
@@ -56,16 +56,23 @@ class _DeleteProfileScreenState extends State<DeleteProfileScreen> {
   }
 
   Future getdata() async {
-    var url = "https://meloned.relaxlikes.com/api/view.php";
+    var url = "https://meloned.relaxlikes.com/api/v0/view.php";
     var response = await http.get(Uri.parse(url));
     return json.decode(response.body);
   }
+
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   print(getdata.toString());
+  // }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('ลบบัญชีผู้ใช้'),
+          title: Center(child: Text('ลบบัญชีผู้ใช้', style: GoogleFonts.kanit())),
         ),
         body: Container(
           child: Padding(
