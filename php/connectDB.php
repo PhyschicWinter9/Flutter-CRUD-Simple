@@ -5,10 +5,10 @@
     // $password = "";
     // $db = "meloned";
 
-    $host = "localhost";
-    $username = "relaxlik_meloned";
-    $password = "0908672636";
-    $db = "relaxlik_meloned";
+    $host = "localhost"; //Database Host
+    $username = ""; //Database Isername
+    $password = ""; //Database Password
+    $db = "";  //Database name
 
 
 $con = new mysqli($host, $username, $password, $db);
