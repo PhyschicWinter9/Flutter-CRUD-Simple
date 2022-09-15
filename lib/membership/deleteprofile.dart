@@ -61,12 +61,6 @@ class _DeleteProfileScreenState extends State<DeleteProfileScreen> {
     return json.decode(response.body);
   }
 
-  // @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   print(getdata.toString());
-  // }
 
   @override
   Widget build(BuildContext context) {
